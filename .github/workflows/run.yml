@@ -1,0 +1,39 @@
+name: scan
+
+on:
+  schedule:
+    - cron: "0 6 * * 1,3,5"  # Pzt-Çar-Cum 06:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests python-dotenv
+
+      - name: Run engine
+        env:
+          FD_API_KEY: ${{ secrets.FD_API_KEY }}
+        run: python engine/run.py
+
+      - name: Commit data changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if ! git diff --cached --quiet; then
+            git commit -m "data: scan $(date -u +%Y-%m-%d)"
+            git push
+          else
+            echo "No data changes to commit"
+          fi

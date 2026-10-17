@@ -1,0 +1,15 @@
+{
+  "mode": "normal",
+  "tier_a": ["MSFT", "GOOGL", "NFLX", "META", "AMZN", "ASML", "TSM", "AVGO", "V", "MA", "KO", "PG", "COST", "NVO", "LLY", "UNH", "VST", "AEP", "LMT", "MP"],
+  "tier_b": ["AAPL", "NVDA", "ADBE", "QCOM", "ORCL", "NKE", "MCO", "SPGI", "CME", "JNJ", "BRK.B", "CAT", "NEE", "WM", "TXN"],
+  "spec": ["QBTS", "RGTI", "IONQ"],
+  "setup_prices": {
+    "META": 560,
+    "AMZN": 215,
+    "GOOGL": 280,
+    "MSFT": 450,
+    "VST": 130,
+    "NVO": 48,
+    "MP": 50
+  }
+}

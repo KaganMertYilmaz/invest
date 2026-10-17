@@ -1,0 +1,7 @@
+{
+  "_comment": "Gerçek pozisyonlarını positions.json dosyasına kopyala (gitignore'da, repoya girmez).",
+  "positions": [
+    { "ticker": "META", "cost_basis": 480.5, "shares": 10 },
+    { "ticker": "MSFT", "cost_basis": 410.0, "shares": 5 }
+  ]
+}
