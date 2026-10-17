@@ -1,5 +1,7 @@
 {
   "mode": "normal",
+  "cash_usd": 1500,
+  "index": ["SPY"],
   "tier_a": ["MSFT", "GOOGL", "NFLX", "META", "AMZN", "ASML", "TSM", "AVGO", "V", "MA", "KO", "PG", "COST", "NVO", "LLY", "UNH", "VST", "AEP", "LMT", "MP"],
   "tier_b": ["AAPL", "NVDA", "ADBE", "QCOM", "ORCL", "NKE", "MCO", "SPGI", "CME", "JNJ", "BRK.B", "CAT", "NEE", "WM", "TXN"],
   "spec": ["QBTS", "RGTI", "IONQ"],
@@ -11,5 +13,19 @@
     "VST": 130,
     "NVO": 48,
     "MP": 50
+  },
+  "theme": {
+    "MSFT": "software", "GOOGL": "software", "META": "software", "AMZN": "software",
+    "ADBE": "software", "ORCL": "software",
+    "NVDA": "ai_infra", "AVGO": "ai_infra", "TSM": "ai_infra", "ASML": "ai_infra",
+    "QCOM": "ai_infra", "TXN": "ai_infra",
+    "NFLX": "consumer", "AAPL": "consumer", "KO": "consumer", "PG": "consumer",
+    "COST": "consumer", "NKE": "consumer",
+    "NVO": "health", "LLY": "health", "UNH": "health", "JNJ": "health",
+    "VST": "utility", "AEP": "utility", "NEE": "utility",
+    "LMT": "defense",
+    "QBTS": "quantum", "RGTI": "quantum", "IONQ": "quantum",
+    "V": "other", "MA": "other", "MCO": "other", "SPGI": "other", "CME": "other",
+    "BRK.B": "other", "CAT": "other", "WM": "other", "MP": "other"
   }
 }

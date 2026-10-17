@@ -94,6 +94,8 @@ def score_ticker(ticker: str, cache: dict, setup_prices: dict, positions: dict) 
         "ticker": ticker,
         "data_missing": False,
         "price": price,
+        "price_source": prices.get("price_source"),
+        "price_date": prices.get("price_date"),
         "pct_from_52w_high": None,
         "pct_from_cost": None,
         "questions": {"q1": None, "q2": None, "q3": None, "q4": None, "q5": None},
@@ -131,4 +133,32 @@ def score_ticker(ticker: str, cache: dict, setup_prices: dict, positions: dict) 
     elif 0 < out["distance_to_setup_pct"] <= 10:
         out["flag"] = "WATCH"
 
+    return out
+
+
+def compute_macro(spy_daily: dict, rows: list, ma_window: int = 200,
+                  drawdown: float = -20.0, breadth_threshold: float = 0.30) -> dict:
+    """Makro rejim (m1 + m2). m3 (VIX) motorda yok, brifing ekler.
+
+    m1 = 1 if SPY fiyatı < 200 günlük ortalama
+    m2 = 1 if evrende 52h zirvesinden >= %20 uzak hisse oranı >= %30
+    """
+    out = {"spy_price": None, "spy_ma200": None, "m1": None, "m2": None,
+           "breadth_pct": None, "score_partial": None}
+
+    bars = (spy_daily or {}).get("bars") or []
+    closes = [b["close"] for b in bars if isinstance(b.get("close"), (int, float))]
+    if len(closes) >= ma_window:
+        out["spy_price"] = round(closes[-1], 2)
+        out["spy_ma200"] = round(sum(closes[-ma_window:]) / ma_window, 2)
+        out["m1"] = 1 if closes[-1] < out["spy_ma200"] else 0
+
+    pcts = [r["pct_from_52w_high"] for r in rows if r.get("pct_from_52w_high") is not None]
+    if pcts:
+        weak = sum(1 for p in pcts if p <= drawdown)
+        out["breadth_pct"] = round(weak / len(pcts) * 100, 1)
+        out["m2"] = 1 if weak / len(pcts) >= breadth_threshold else 0
+
+    if out["m1"] is not None and out["m2"] is not None:
+        out["score_partial"] = out["m1"] + out["m2"]
     return out

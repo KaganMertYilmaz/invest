@@ -12,6 +12,7 @@ BASE_URL = "https://api.financialdatasets.ai"
 
 UNIVERSE_FILE = ROOT / "universe.json"
 POSITIONS_FILE = ROOT / "positions.json"
+POSITIONS_EXAMPLE_FILE = ROOT / "positions.example.json"
 DATA_DIR = ROOT / "data"
 CACHE_DIR = DATA_DIR / "cache"
 LATEST_FILE = DATA_DIR / "latest.json"
