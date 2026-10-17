@@ -49,13 +49,12 @@ def wants_price_today(tier: str, mode_cfg: dict, today: dt.date) -> bool:
     return False
 
 
-def load_positions() -> tuple[dict, str]:
-    """positions.json yoksa positions.example.json. Dönüş: ({ticker: pozisyon}, kaynak dosya adı)."""
-    for path in (config.POSITIONS_FILE, config.POSITIONS_EXAMPLE_FILE):
-        raw = load_json(path)
-        if raw is not None:
-            return {p["ticker"]: p for p in raw.get("positions", [])}, path.name
-    return {}, "none"
+def load_positions() -> tuple[dict, str | None]:
+    """Sadece positions.json (gerçek pozisyonlar). Yoksa ({}, None) → risk hesaplanmaz."""
+    raw = load_json(config.POSITIONS_FILE)
+    if raw is None:
+        return {}, None
+    return {p["ticker"]: p for p in raw.get("positions", [])}, config.POSITIONS_FILE.name
 
 
 def main() -> int:
@@ -115,7 +114,7 @@ def main() -> int:
 
     label = "[dry-run] " if args.dry_run else ("[no-api] " if args.no_api else "")
     print(f"{label}mod={mode}  tarih={today} ({DAY_NAMES[today.weekday()]})  "
-          f"pozisyon kaynağı={positions_src}")
+          f"pozisyon kaynağı={positions_src or 'yok'}")
     n_price = sum(1 for _, _, wp, _ in plan if wp)
     n_fund = sum(1 for _, _, _, wf in plan if wf)
     print(f"Plan: {n_price} ticker fiyat, {n_fund} ticker temel veri, endeks={index_tickers}")
@@ -160,11 +159,13 @@ def main() -> int:
         macro = score.compute_macro(daily, results)
         macro["index"] = idx
 
-    # Risk: pozisyon ağırlıkları + alım kapasitesi
-    prices = {r["ticker"]: r["price"] for r in results if r["price"] is not None}
-    risk_out = risk.compute_risk(positions, prices, themes, universe.get("spec", []),
-                                 universe_tickers, universe.get("cash_usd"))
-    risk_out["positions_source"] = positions_src
+    # Risk: pozisyon ağırlıkları + alım kapasitesi (positions.json yoksa null, örnekle hesaplanmaz)
+    risk_out = None
+    if positions_src is not None:
+        prices = {r["ticker"]: r["price"] for r in results if r["price"] is not None}
+        risk_out = risk.compute_risk(positions, prices, themes, universe.get("spec", []),
+                                     universe_tickers, universe.get("cash_usd"))
+        risk_out["positions_source"] = positions_src
 
     requests_made = fetch.REQUEST_COUNT
     out = {
@@ -192,7 +193,9 @@ def main() -> int:
           f"fiyat kaynağı: {sources}")
     if macro:
         print("Makro:", json.dumps(macro))
-    if risk_out["breaches"]:
+    if risk_out is None:
+        print("Risk: positions.json yok, risk bloğu null")
+    elif risk_out["breaches"]:
         print("Risk ihlalleri:", json.dumps(risk_out["breaches"]))
     if flags:
         print("Bayraklar:", json.dumps(flags))

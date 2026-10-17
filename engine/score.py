@@ -125,12 +125,12 @@ def score_ticker(ticker: str, cache: dict, setup_prices: dict, positions: dict) 
     out["setup_price"] = setup
     out["distance_to_setup_pct"] = round((price - setup) / setup * 100, 2)
 
-    # Bayrak önceliği: NIKE (tez bozulması) > SETUP > WATCH > NONE
+    # Bayrak önceliği: NIKE (tez bozulması) > SETUP > WATCH > NONE (WATCH/SETUP için test_score >= 4)
     if q["q1"] is False or q["q2"] is False:
         out["flag"] = "NIKE"
     elif out["test_score"] >= 4 and price <= setup:
         out["flag"] = "SETUP"
-    elif 0 < out["distance_to_setup_pct"] <= 10:
+    elif out["test_score"] >= 4 and 0 < out["distance_to_setup_pct"] <= 10:
         out["flag"] = "WATCH"
 
     return out

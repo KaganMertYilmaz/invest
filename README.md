@@ -15,7 +15,7 @@ py engine/run.py --no-api        # hiç API çağrısı yok, sadece cache'ten sk
 Her koşu sonunda `TOPLAM İSTEK: N (~$X)` yazdırılır. İstek başı ~$0.02.
 
 - `.env` → `FD_API_KEY=...` (bkz. `.env.example`)
-- `positions.json` → gerçek pozisyonlar (gitignore'da). Yoksa `positions.example.json` kullanılır.
+- `positions.json` → gerçek pozisyonlar (gitignore'da). Yoksa (örn. CI'da) `risk: null` yazılır; örnek dosya ile hesaplanmaz.
 - `data/cache/` repoya commit edilir; CI bu sayede 90 günlük temel veri cache'ini kullanır.
 
 ## Zamanlama (CI)
@@ -98,8 +98,8 @@ spek ticker'larda hisse limiti 0.10 ve ek olarak `0.30·P − spek toplamı` uyg
     "score_partial": 1              // m1 + m2 (m3 VIX brifingde eklenir); veri yoksa null
   },
 
-  "risk": {
-    "positions_source": "positions.json | positions.example.json | none",
+  "risk": {                         // positions.json yoksa null
+    "positions_source": "positions.json",
     "portfolio_usd": 11196.9,
     "positions_usd": 9696.9,
     "cash_usd": 1500.0,
@@ -151,4 +151,4 @@ spek ticker'larda hisse limiti 0.10 ve ek olarak `0.30·P − spek toplamı` uyg
 | q5 | net borç / EBITDA < 2 (net borç ≤ 0 ise true) |
 
 Bayraklar: `NIKE` (q1 veya q2 false, tez bozulması) > `SETUP` (test_score ≥ 4 ve fiyat ≤ setup)
-> `WATCH` (setup'a %0–10 uzak) > `NONE`.
+> `WATCH` (test_score ≥ 4 ve fiyat setup'ın en fazla %10 üstünde) > `NONE`. test_score < 4 ise SETUP/WATCH verilmez.

@@ -1,11 +1,11 @@
 {
   "run_date": "2026-10-17",
-  "run_at": "2026-10-17T18:22:49Z",
+  "run_at": "2026-10-17T18:35:58Z",
   "mode": "normal",
-  "dry_run": true,
-  "tickers_fetched": 38,
-  "requests_made": 41,
-  "credits_used_estimate": 0.82,
+  "dry_run": false,
+  "tickers_fetched": 0,
+  "requests_made": 0,
+  "credits_used_estimate": 0.0,
   "data_missing": [],
   "errors": {},
   "macro": {
@@ -17,81 +17,7 @@
     "score_partial": 1,
     "index": "SPY"
   },
-  "risk": {
-    "portfolio_usd": 11196.9,
-    "positions_usd": 9696.9,
-    "cash_usd": 1500.0,
-    "spec_weight": 0.0,
-    "weights": {
-      "META": 0.6305,
-      "MSFT": 0.2355
-    },
-    "theme_weights": {
-      "software": 0.866
-    },
-    "breaches": [
-      {
-        "type": "single",
-        "ticker": "META",
-        "weight": 0.6305,
-        "limit": 0.25
-      },
-      {
-        "type": "theme",
-        "theme": "software",
-        "weight": 0.866,
-        "limit": 0.4
-      }
-    ],
-    "max_new_buy_usd": {
-      "MSFT": 0.0,
-      "GOOGL": 0.0,
-      "NFLX": 1500.0,
-      "META": 0.0,
-      "AMZN": 0.0,
-      "ASML": 1500.0,
-      "TSM": 1500.0,
-      "AVGO": 1500.0,
-      "V": 1500.0,
-      "MA": 1500.0,
-      "KO": 1500.0,
-      "PG": 1500.0,
-      "COST": 1500.0,
-      "NVO": 1500.0,
-      "LLY": 1500.0,
-      "UNH": 1500.0,
-      "VST": 1500.0,
-      "AEP": 1500.0,
-      "LMT": 1500.0,
-      "MP": 1500.0,
-      "AAPL": 1500.0,
-      "NVDA": 1500.0,
-      "ADBE": 0.0,
-      "QCOM": 1500.0,
-      "ORCL": 0.0,
-      "NKE": 1500.0,
-      "MCO": 1500.0,
-      "SPGI": 1500.0,
-      "CME": 1500.0,
-      "JNJ": 1500.0,
-      "BRK.B": 1500.0,
-      "CAT": 1500.0,
-      "NEE": 1500.0,
-      "WM": 1500.0,
-      "TXN": 1500.0,
-      "QBTS": 1119.69,
-      "RGTI": 1119.69,
-      "IONQ": 1119.69
-    },
-    "missing_price": [],
-    "limits": {
-      "single": 0.25,
-      "theme": 0.4,
-      "spec_total": 0.3,
-      "spec_single": 0.1
-    },
-    "positions_source": "positions.example.json"
-  },
+  "risk": null,
   "tickers": [
     {
       "ticker": "MSFT",
@@ -100,7 +26,7 @@
       "price_source": "snapshot",
       "price_date": "2026-10-16",
       "pct_from_52w_high": -4.75,
-      "pct_from_cost": 28.63,
+      "pct_from_cost": null,
       "questions": {
         "q1": true,
         "q2": true,
@@ -166,7 +92,7 @@
       "price_source": "snapshot",
       "price_date": "2026-10-16",
       "pct_from_52w_high": -9.47,
-      "pct_from_cost": 46.93,
+      "pct_from_cost": null,
       "questions": {
         "q1": true,
         "q2": true,
@@ -221,7 +147,7 @@
       "test_score": 2,
       "setup_price": 1599.97,
       "distance_to_setup_pct": 2.58,
-      "flag": "WATCH",
+      "flag": "NONE",
       "tier": "tier_a",
       "theme": "ai_infra"
     },
@@ -243,7 +169,7 @@
       "test_score": 2,
       "setup_price": 389.98,
       "distance_to_setup_pct": 5.56,
-      "flag": "WATCH",
+      "flag": "NONE",
       "tier": "tier_a",
       "theme": "ai_infra"
     },
@@ -815,7 +741,7 @@
       "test_score": 3,
       "setup_price": 79.0,
       "distance_to_setup_pct": 1.0,
-      "flag": "WATCH",
+      "flag": "NONE",
       "tier": "tier_b",
       "theme": "utility"
     },
