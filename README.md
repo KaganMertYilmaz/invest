@@ -6,9 +6,9 @@ portföy risk hesabı üretir. **Hiçbir şey emir vermez, sadece hesaplar.** Pa
 ## Çalıştırma
 
 ```
-py engine/run.py                 # tam çalıştırma: fiyat (takvime göre) + bayat temel veri + SPY
-py engine/run.py --dry-run       # test koşusu: TÜM fiyatlar + SPY çekilir, temel veri cache'ten (çekilmez)
-py engine/run.py --force-prices  # takvimden bağımsız tüm fiyatlar + bayat temel veri + SPY
+py engine/run.py                 # tam çalıştırma: fiyat (takvime göre) + bayat temel veri + endeksler (SPY/XLK/XLP)
+py engine/run.py --dry-run       # test koşusu: TÜM fiyatlar + endeksler çekilir, temel veri cache'ten (çekilmez)
+py engine/run.py --force-prices  # takvimden bağımsız tüm fiyatlar + bayat temel veri + endeksler
 py engine/run.py --no-api        # hiç API çağrısı yok, sadece cache'ten skor/makro/risk
 ```
 
@@ -30,7 +30,7 @@ Her koşu sonunda `TOPLAM İSTEK: N (~$X)` yazdırılır. İstek başı ~$0.02.
 |---|---|
 | `mode` | `normal` / `light` / `paused` (bkz. `engine/config.py` MODES) |
 | `cash_usd` | nakit (varsayılan 1500), risk hesabında portföye eklenir |
-| `index` | makro endeks listesi, ilki kullanılır (`["SPY"]`) |
+| `index` | endeks listesi (`["SPY", "XLK", "XLP"]`): ilki m1 için, `XLK`/`XLP` m4 için; hepsi aynı cache mantığıyla çekilir |
 | `tier_a`, `tier_b`, `spec` | ticker listeleri; spec için sıkı risk limitleri |
 | `setup_prices` | ticker → setup fiyatı (yoksa 52h zirve × 0.8) |
 | `theme` | ticker → tema: `ai_infra`, `software`, `consumer`, `health`, `utility`, `defense`, `quantum`, `other` |
@@ -43,8 +43,8 @@ Her koşu sonunda `TOPLAM İSTEK: N (~$X)` yazdırılır. İstek başı ~$0.02.
 | snapshot gelmezse son kapanış (günlük bar) | +1 |
 | 52h zirve (haftalık mumlar), 7 günde bir | +1 / ticker |
 | temel veri (income ttm + quarterly + balance + cash flow), 90 günde bir | 4 / ticker |
-| SPY günlük kapanış: ilk dolum / 90 günde bir tam | 3 |
-| SPY artımlı (sadece son barlar) | 1 / koşu |
+| endeks günlük kapanış (SPY, XLK, XLP): ilk dolum / 90 günde bir tam | 3 / endeks |
+| endeks artımlı (sadece son barlar) | 1 / endeks / koşu |
 
 ## Fiyat kaynağı
 
@@ -59,6 +59,10 @@ anlık fiyat zirveyi aşarsa zirve = anlık fiyat.
 - `m1 = 1` ise SPY fiyatı < 200 günlük basit ortalama (son 220 işlem günü cache'te)
 - `m2 = 1` ise evrende `pct_from_52w_high <= -20` olan hisse oranı ≥ %30
 - `score_partial = m1 + m2`. **m3 (VIX) motorda yok, brifing ekler.**
+- `m4 = 1` ise XLK/XLP oranı 126 işlem günü (~6 ay) öncesinden düşük (teknolojiden savunmacıya rotasyon).
+  `xlk_xlp_ratio_6m = (XLK/XLP bugün) / (XLK/XLP 126 gün önce)`, 4 ondalık. Oran tarih bazında
+  eşleştirilmiş son ortak bardan hesaplanır. **m4 `score_partial`'a katılmaz, ayrı sinyaldir.**
+  XLK/XLP cache'te yoksa (ör. `--no-api` ilk dolumdan önce) `m4` ve `xlk_xlp_ratio_6m` null.
 
 ## Risk (engine/risk.py)
 
@@ -86,7 +90,7 @@ spek ticker'larda hisse limiti 0.10 ve ek olarak `0.30·P − spek toplamı` uyg
   "requests_made": 41,              // toplam HTTP isteği
   "credits_used_estimate": 0.82,    // requests_made × 0.02
   "data_missing": ["..."],          // fiyat veya temel verisi olmayan ticker'lar
-  "errors": { "TICKER": "price: ... | fundamentals: ... | index SPY: ..." },
+  "errors": { "TICKER": "price: ... | fundamentals: ... | index SPY/XLK/XLP: ..." },
 
   "macro": {
     "index": "SPY",
@@ -95,7 +99,9 @@ spek ticker'larda hisse limiti 0.10 ve ek olarak `0.30·P − spek toplamı` uyg
     "m1": 0,                        // 1: SPY < MA200
     "m2": 1,                        // 1: breadth_pct >= 30
     "breadth_pct": 39.5,            // zirveden >= %20 uzak hisse yüzdesi
-    "score_partial": 1              // m1 + m2 (m3 VIX brifingde eklenir); veri yoksa null
+    "score_partial": 1,             // m1 + m2 (m3 VIX brifingde eklenir); veri yoksa null
+    "xlk_xlp_ratio_6m": 0.9731,     // (XLK/XLP bugün) / (XLK/XLP 126 işlem günü önce); veri yoksa null
+    "m4": 1                         // 1: oran 6 ay öncesinden düşük; score_partial'a dahil DEĞİL
   },
 
   "risk": {                         // positions.json yoksa null

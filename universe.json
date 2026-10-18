@@ -1,7 +1,7 @@
 {
   "mode": "normal",
   "cash_usd": 1500,
-  "index": ["SPY"],
+  "index": ["SPY", "XLK", "XLP"],
   "tier_a": ["MSFT", "GOOGL", "NFLX", "META", "AMZN", "ASML", "TSM", "AVGO", "V", "MA", "KO", "PG", "COST", "NVO", "LLY", "UNH", "VST", "AEP", "LMT", "MP"],
   "tier_b": ["AAPL", "NVDA", "ADBE", "QCOM", "ORCL", "NKE", "MCO", "SPGI", "CME", "JNJ", "BRK.B", "CAT", "NEE", "WM", "TXN"],
   "spec": ["QBTS", "RGTI", "IONQ"],

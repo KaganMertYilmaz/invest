@@ -162,3 +162,27 @@ def compute_macro(spy_daily: dict, rows: list, ma_window: int = 200,
     if out["m1"] is not None and out["m2"] is not None:
         out["score_partial"] = out["m1"] + out["m2"]
     return out
+
+
+def compute_ratio_m4(xlk_daily: dict, xlp_daily: dict, lookback: int = 126) -> dict:
+    """m4: sektör rotasyonu (XLK/XLP oranı). score_partial'a KATILMAZ, ayrı sinyal.
+
+    ratio_now = XLK_close / XLP_close (son ortak bar)
+    ratio_6m  = aynı oran lookback (126) işlem günü önce
+    m4 = 1 if ratio_now < ratio_6m else 0
+    xlk_xlp_ratio_6m = ratio_now / ratio_6m (4 ondalık)
+    Veri yetersizse her ikisi de null.
+    """
+    out = {"xlk_xlp_ratio_6m": None, "m4": None}
+    xlk = {b["time"]: b["close"] for b in (xlk_daily or {}).get("bars") or []
+           if isinstance(b.get("close"), (int, float)) and b["close"] > 0}
+    xlp = {b["time"]: b["close"] for b in (xlp_daily or {}).get("bars") or []
+           if isinstance(b.get("close"), (int, float)) and b["close"] > 0}
+    days = sorted(set(xlk) & set(xlp))
+    if len(days) <= lookback:
+        return out
+    ratio_now = xlk[days[-1]] / xlp[days[-1]]
+    ratio_6m = xlk[days[-1 - lookback]] / xlp[days[-1 - lookback]]
+    out["xlk_xlp_ratio_6m"] = round(ratio_now / ratio_6m, 4)
+    out["m4"] = 1 if ratio_now < ratio_6m else 0
+    return out

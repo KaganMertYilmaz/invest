@@ -1,7 +1,7 @@
 """fetch + score + macro + risk: data/latest.json üretir.
 
 Kullanım:
-  python engine/run.py                 # tam çalıştırma (fiyat + bayat temel veri + SPY)
+  python engine/run.py                 # tam çalıştırma (fiyat + bayat temel veri + SPY/XLK/XLP)
   python engine/run.py --dry-run       # temel veriyi cache'ten kullanır, yeniden ÇEKMEZ;
                                        # sadece fiyat + SPY çeker, istek sayısını yazdırır
   python engine/run.py --force-prices  # takvimden bağımsız tüm ticker'lar için fiyat çek
@@ -146,18 +146,23 @@ def main() -> int:
             data_missing.append(t)
         results.append(row)
 
-    # Makro: endeks (SPY) günlük kapanışları
+    # Makro: endeks günlük kapanışları (SPY → m1/m2, XLK/XLP → m4; hepsi aynı cache mantığı)
     macro = None
     if index_tickers:
+        index_daily = {}
+        for idx in index_tickers:
+            if use_api:
+                daily, _, err = fetch.refresh_index(idx)
+                if err:
+                    errors[idx] = err
+            else:
+                daily = fetch.load_cache(idx).get("daily") or {}
+            index_daily[idx] = daily
         idx = index_tickers[0]
-        if use_api:
-            daily, _, err = fetch.refresh_index(idx)
-            if err:
-                errors[idx] = err
-        else:
-            daily = fetch.load_cache(idx).get("daily") or {}
-        macro = score.compute_macro(daily, results)
+        macro = score.compute_macro(index_daily[idx], results)
         macro["index"] = idx
+        # m4 ayrı sinyal, score_partial'a katılmaz; XLK/XLP cache'te yoksa null
+        macro.update(score.compute_ratio_m4(index_daily.get("XLK"), index_daily.get("XLP")))
 
     # Risk: pozisyon ağırlıkları + alım kapasitesi (positions.json yoksa null, örnekle hesaplanmaz)
     risk_out = None

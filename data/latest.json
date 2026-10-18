@@ -1,6 +1,6 @@
 {
-  "run_date": "2026-10-17",
-  "run_at": "2026-10-17T18:35:58Z",
+  "run_date": "2026-10-18",
+  "run_at": "2026-10-18T11:22:16Z",
   "mode": "normal",
   "dry_run": false,
   "tickers_fetched": 0,
@@ -15,7 +15,9 @@
     "m2": 1,
     "breadth_pct": 39.5,
     "score_partial": 1,
-    "index": "SPY"
+    "index": "SPY",
+    "xlk_xlp_ratio_6m": null,
+    "m4": null
   },
   "risk": null,
   "tickers": [
