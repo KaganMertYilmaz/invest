@@ -20,8 +20,8 @@ Her koşu sonunda `TOPLAM İSTEK: N (~$X)` yazdırılır. İstek başı ~$0.02.
 
 ## Zamanlama (CI)
 
-`.github/workflows/run.yml`: cron `45 14 * * 1,3,5` → Pzt/Çar/Cum 14:45 UTC (ABD açılışından
-~75 dk sonra). `workflow_dispatch` ile elle de tetiklenir. Koşu sonrası `data/` commit+push edilir.
+`.github/workflows/run.yml`: cron `17 5 * * 1,3,5` → Pzt/Çar/Cum 05:17 UTC (TR 08:17, ABD açılışı öncesi; snapshot son
+işlem fiyatını verir. GitHub cron 4-5 saat gecikebilir, yine de TR 17:10 brifinginden önce biter). `workflow_dispatch` ile elle de tetiklenir. Koşu sonrası `data/` commit+push edilir.
 `FD_API_KEY` repo secret'ı gerekir.
 
 ## universe.json
