@@ -1,11 +1,11 @@
 {
   "prices": {
-    "fetched_at": "2026-10-19T20:12:25Z",
-    "price": 217.08,
+    "fetched_at": "2026-10-26T11:08:21Z",
+    "price": 211.0,
     "price_source": "snapshot",
-    "price_date": "2026-10-19",
+    "price_date": "2026-10-26",
     "high_52w": 243.37,
-    "high_52w_fetched_at": "2026-10-17T14:20:48Z",
+    "high_52w_fetched_at": "2026-10-26T11:08:21Z",
     "split_adjusted": false
   },
   "fundamentals": {

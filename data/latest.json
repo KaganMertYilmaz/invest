@@ -1,11 +1,11 @@
 {
-  "run_date": "2026-10-25",
-  "run_at": "2026-10-25T23:22:30Z",
+  "run_date": "2026-10-26",
+  "run_at": "2026-10-26T11:08:28Z",
   "mode": "normal",
   "dry_run": false,
-  "tickers_fetched": 0,
-  "requests_made": 3,
-  "credits_used_estimate": 0.06,
+  "tickers_fetched": 38,
+  "requests_made": 79,
+  "credits_used_estimate": 1.58,
   "data_missing": [],
   "errors": {},
   "macro": {
@@ -13,7 +13,7 @@
     "spy_ma200": 727.01,
     "m1": 0,
     "m2": 1,
-    "breadth_pct": 44.7,
+    "breadth_pct": 42.1,
     "score_partial": 1,
     "index": "SPY",
     "xlk_xlp_ratio_6m": 1.0784,
@@ -24,10 +24,10 @@
     {
       "ticker": "MSFT",
       "data_missing": false,
-      "price": 523.86,
+      "price": 527.9,
       "price_source": "snapshot",
-      "price_date": "2026-10-23",
-      "pct_from_52w_high": -5.39,
+      "price_date": "2026-10-26",
+      "pct_from_52w_high": -4.66,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -38,7 +38,7 @@
       },
       "test_score": 4,
       "setup_price": 450,
-      "distance_to_setup_pct": 16.41,
+      "distance_to_setup_pct": 17.31,
       "flag": "NONE",
       "tier": "tier_a",
       "theme": "software"
@@ -46,10 +46,10 @@
     {
       "ticker": "GOOGL",
       "data_missing": false,
-      "price": 321.78,
+      "price": 321.0,
       "price_source": "snapshot",
       "price_date": "2026-10-23",
-      "pct_from_52w_high": -21.25,
+      "pct_from_52w_high": -21.44,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -60,7 +60,7 @@
       },
       "test_score": 5,
       "setup_price": 280,
-      "distance_to_setup_pct": 14.92,
+      "distance_to_setup_pct": 14.64,
       "flag": "NONE",
       "tier": "tier_a",
       "theme": "software"
@@ -68,10 +68,10 @@
     {
       "ticker": "NFLX",
       "data_missing": false,
-      "price": 65.97,
+      "price": 65.85,
       "price_source": "snapshot",
-      "price_date": "2026-10-23",
-      "pct_from_52w_high": -46.94,
+      "price_date": "2026-10-26",
+      "pct_from_52w_high": -43.35,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -81,8 +81,8 @@
         "q5": true
       },
       "test_score": 5,
-      "setup_price": 99.47,
-      "distance_to_setup_pct": -33.68,
+      "setup_price": 92.99,
+      "distance_to_setup_pct": -29.19,
       "flag": "SETUP",
       "tier": "tier_a",
       "theme": "consumer"
@@ -90,10 +90,10 @@
     {
       "ticker": "META",
       "data_missing": false,
-      "price": 644.95,
+      "price": 620.01,
       "price_source": "snapshot",
-      "price_date": "2026-10-23",
-      "pct_from_52w_high": -17.3,
+      "price_date": "2026-10-26",
+      "pct_from_52w_high": -20.49,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -104,7 +104,7 @@
       },
       "test_score": 4,
       "setup_price": 560,
-      "distance_to_setup_pct": 15.17,
+      "distance_to_setup_pct": 10.72,
       "flag": "NONE",
       "tier": "tier_a",
       "theme": "software"
@@ -112,10 +112,10 @@
     {
       "ticker": "AMZN",
       "data_missing": false,
-      "price": 248.24,
+      "price": 249.0,
       "price_source": "snapshot",
-      "price_date": "2026-10-23",
-      "pct_from_52w_high": -13.57,
+      "price_date": "2026-10-26",
+      "pct_from_52w_high": -13.3,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -126,7 +126,7 @@
       },
       "test_score": 4,
       "setup_price": 215,
-      "distance_to_setup_pct": 15.46,
+      "distance_to_setup_pct": 15.81,
       "flag": "NONE",
       "tier": "tier_a",
       "theme": "software"
@@ -134,10 +134,10 @@
     {
       "ticker": "ASML",
       "data_missing": false,
-      "price": 1572.34,
+      "price": 1575.44,
       "price_source": "snapshot",
-      "price_date": "2026-10-23",
-      "pct_from_52w_high": -21.38,
+      "price_date": "2026-10-26",
+      "pct_from_52w_high": -21.23,
       "pct_from_cost": null,
       "questions": {
         "q1": null,
@@ -148,7 +148,7 @@
       },
       "test_score": 2,
       "setup_price": 1599.97,
-      "distance_to_setup_pct": -1.73,
+      "distance_to_setup_pct": -1.53,
       "flag": "NONE",
       "tier": "tier_a",
       "theme": "ai_infra"
@@ -156,10 +156,10 @@
     {
       "ticker": "TSM",
       "data_missing": false,
-      "price": 417.25,
+      "price": 418.5,
       "price_source": "snapshot",
-      "price_date": "2026-10-23",
-      "pct_from_52w_high": -14.4,
+      "price_date": "2026-10-26",
+      "pct_from_52w_high": -14.15,
       "pct_from_cost": null,
       "questions": {
         "q1": null,
@@ -170,7 +170,7 @@
       },
       "test_score": 2,
       "setup_price": 389.98,
-      "distance_to_setup_pct": 6.99,
+      "distance_to_setup_pct": 7.31,
       "flag": "NONE",
       "tier": "tier_a",
       "theme": "ai_infra"
@@ -178,10 +178,10 @@
     {
       "ticker": "AVGO",
       "data_missing": false,
-      "price": 324.36,
+      "price": 323.98,
       "price_source": "snapshot",
-      "price_date": "2026-10-23",
-      "pct_from_52w_high": -34.47,
+      "price_date": "2026-10-26",
+      "pct_from_52w_high": -34.55,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -192,7 +192,7 @@
       },
       "test_score": 5,
       "setup_price": 396.0,
-      "distance_to_setup_pct": -18.09,
+      "distance_to_setup_pct": -18.19,
       "flag": "SETUP",
       "tier": "tier_a",
       "theme": "ai_infra"
@@ -200,10 +200,10 @@
     {
       "ticker": "V",
       "data_missing": false,
-      "price": 409.2,
+      "price": 410.31,
       "price_source": "snapshot",
-      "price_date": "2026-10-23",
-      "pct_from_52w_high": 0.0,
+      "price_date": "2026-10-26",
+      "pct_from_52w_high": -1.03,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -213,8 +213,8 @@
         "q5": true
       },
       "test_score": 4,
-      "setup_price": 327.36,
-      "distance_to_setup_pct": 25.0,
+      "setup_price": 331.68,
+      "distance_to_setup_pct": 23.71,
       "flag": "NONE",
       "tier": "tier_a",
       "theme": "other"
@@ -222,10 +222,10 @@
     {
       "ticker": "MA",
       "data_missing": false,
-      "price": 622.11,
+      "price": 623.38,
       "price_source": "snapshot",
       "price_date": "2026-10-23",
-      "pct_from_52w_high": -0.09,
+      "pct_from_52w_high": -1.56,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -235,8 +235,8 @@
         "q5": true
       },
       "test_score": 5,
-      "setup_price": 498.14,
-      "distance_to_setup_pct": 24.89,
+      "setup_price": 506.63,
+      "distance_to_setup_pct": 23.04,
       "flag": "NONE",
       "tier": "tier_a",
       "theme": "other"
@@ -244,10 +244,10 @@
     {
       "ticker": "KO",
       "data_missing": false,
-      "price": 92.81,
+      "price": 92.7,
       "price_source": "snapshot",
       "price_date": "2026-10-23",
-      "pct_from_52w_high": -1.37,
+      "pct_from_52w_high": -2.8,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -257,8 +257,8 @@
         "q5": true
       },
       "test_score": 5,
-      "setup_price": 75.28,
-      "distance_to_setup_pct": 23.29,
+      "setup_price": 76.3,
+      "distance_to_setup_pct": 21.49,
       "flag": "NONE",
       "tier": "tier_a",
       "theme": "consumer"
@@ -266,10 +266,10 @@
     {
       "ticker": "PG",
       "data_missing": false,
-      "price": 161.53,
+      "price": 161.12,
       "price_source": "snapshot",
       "price_date": "2026-10-23",
-      "pct_from_52w_high": -3.42,
+      "pct_from_52w_high": -3.67,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -280,7 +280,7 @@
       },
       "test_score": 3,
       "setup_price": 133.8,
-      "distance_to_setup_pct": 20.72,
+      "distance_to_setup_pct": 20.42,
       "flag": "NIKE",
       "tier": "tier_a",
       "theme": "consumer"
@@ -288,10 +288,10 @@
     {
       "ticker": "COST",
       "data_missing": false,
-      "price": 1003.62,
+      "price": 1003.18,
       "price_source": "snapshot",
       "price_date": "2026-10-23",
-      "pct_from_52w_high": -8.47,
+      "pct_from_52w_high": -8.51,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -302,7 +302,7 @@
       },
       "test_score": 5,
       "setup_price": 877.2,
-      "distance_to_setup_pct": 14.41,
+      "distance_to_setup_pct": 14.36,
       "flag": "NONE",
       "tier": "tier_a",
       "theme": "consumer"
@@ -310,10 +310,10 @@
     {
       "ticker": "NVO",
       "data_missing": false,
-      "price": 38.9,
+      "price": 39.24,
       "price_source": "snapshot",
-      "price_date": "2026-10-23",
-      "pct_from_52w_high": -39.37,
+      "price_date": "2026-10-26",
+      "pct_from_52w_high": -38.84,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -324,7 +324,7 @@
       },
       "test_score": 5,
       "setup_price": 48,
-      "distance_to_setup_pct": -18.96,
+      "distance_to_setup_pct": -18.25,
       "flag": "SETUP",
       "tier": "tier_a",
       "theme": "health"
@@ -332,10 +332,10 @@
     {
       "ticker": "LLY",
       "data_missing": false,
-      "price": 1259.57,
+      "price": 1283.2,
       "price_source": "snapshot",
-      "price_date": "2026-10-23",
-      "pct_from_52w_high": -2.56,
+      "price_date": "2026-10-26",
+      "pct_from_52w_high": -2.88,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -345,8 +345,8 @@
         "q5": true
       },
       "test_score": 4,
-      "setup_price": 1034.12,
-      "distance_to_setup_pct": 21.8,
+      "setup_price": 1056.97,
+      "distance_to_setup_pct": 21.4,
       "flag": "NONE",
       "tier": "tier_a",
       "theme": "health"
@@ -354,10 +354,10 @@
     {
       "ticker": "UNH",
       "data_missing": false,
-      "price": 417.59,
+      "price": 420.9,
       "price_source": "snapshot",
-      "price_date": "2026-10-23",
-      "pct_from_52w_high": -9.54,
+      "price_date": "2026-10-26",
+      "pct_from_52w_high": -8.82,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -368,7 +368,7 @@
       },
       "test_score": 4,
       "setup_price": 369.3,
-      "distance_to_setup_pct": 13.08,
+      "distance_to_setup_pct": 13.97,
       "flag": "NONE",
       "tier": "tier_a",
       "theme": "health"
@@ -376,10 +376,10 @@
     {
       "ticker": "VST",
       "data_missing": false,
-      "price": 139.77,
+      "price": 140.24,
       "price_source": "snapshot",
       "price_date": "2026-10-23",
-      "pct_from_52w_high": -33.46,
+      "pct_from_52w_high": -31.14,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -390,7 +390,7 @@
       },
       "test_score": 2,
       "setup_price": 130,
-      "distance_to_setup_pct": 7.52,
+      "distance_to_setup_pct": 7.88,
       "flag": "NONE",
       "tier": "tier_a",
       "theme": "utility"
@@ -398,10 +398,10 @@
     {
       "ticker": "AEP",
       "data_missing": false,
-      "price": 129.2,
+      "price": 129.68,
       "price_source": "snapshot",
       "price_date": "2026-10-23",
-      "pct_from_52w_high": -8.1,
+      "pct_from_52w_high": -7.75,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -412,7 +412,7 @@
       },
       "test_score": 2,
       "setup_price": 112.46,
-      "distance_to_setup_pct": 14.89,
+      "distance_to_setup_pct": 15.31,
       "flag": "NIKE",
       "tier": "tier_a",
       "theme": "utility"
@@ -420,10 +420,10 @@
     {
       "ticker": "LMT",
       "data_missing": false,
-      "price": 605.87,
+      "price": 604.45,
       "price_source": "snapshot",
       "price_date": "2026-10-23",
-      "pct_from_52w_high": -12.45,
+      "pct_from_52w_high": -12.65,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -434,7 +434,7 @@
       },
       "test_score": 5,
       "setup_price": 553.6,
-      "distance_to_setup_pct": 9.44,
+      "distance_to_setup_pct": 9.19,
       "flag": "WATCH",
       "tier": "tier_a",
       "theme": "defense"
@@ -442,10 +442,10 @@
     {
       "ticker": "MP",
       "data_missing": false,
-      "price": 38.52,
+      "price": 38.42,
       "price_source": "snapshot",
       "price_date": "2026-10-23",
-      "pct_from_52w_high": -54.22,
+      "pct_from_52w_high": -49.97,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -456,7 +456,7 @@
       },
       "test_score": 2,
       "setup_price": 50,
-      "distance_to_setup_pct": -22.96,
+      "distance_to_setup_pct": -23.16,
       "flag": "NONE",
       "tier": "tier_a",
       "theme": "other"
@@ -464,10 +464,10 @@
     {
       "ticker": "AAPL",
       "data_missing": false,
-      "price": 342.6,
+      "price": 343.0,
       "price_source": "snapshot",
-      "price_date": "2026-10-19",
-      "pct_from_52w_high": -1.59,
+      "price_date": "2026-10-26",
+      "pct_from_52w_high": -2.48,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -477,8 +477,8 @@
         "q5": true
       },
       "test_score": 4,
-      "setup_price": 278.52,
-      "distance_to_setup_pct": 23.01,
+      "setup_price": 281.38,
+      "distance_to_setup_pct": 21.9,
       "flag": "NONE",
       "tier": "tier_b",
       "theme": "consumer"
@@ -486,10 +486,10 @@
     {
       "ticker": "NVDA",
       "data_missing": false,
-      "price": 217.08,
+      "price": 211.0,
       "price_source": "snapshot",
-      "price_date": "2026-10-19",
-      "pct_from_52w_high": -10.8,
+      "price_date": "2026-10-26",
+      "pct_from_52w_high": -13.3,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -500,18 +500,18 @@
       },
       "test_score": 5,
       "setup_price": 194.7,
-      "distance_to_setup_pct": 11.49,
-      "flag": "NONE",
+      "distance_to_setup_pct": 8.37,
+      "flag": "WATCH",
       "tier": "tier_b",
       "theme": "ai_infra"
     },
     {
       "ticker": "ADBE",
       "data_missing": false,
-      "price": 247.04,
+      "price": 263.82,
       "price_source": "snapshot",
-      "price_date": "2026-10-19",
-      "pct_from_52w_high": -32.08,
+      "price_date": "2026-10-26",
+      "pct_from_52w_high": -27.46,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -522,7 +522,7 @@
       },
       "test_score": 4,
       "setup_price": 290.96,
-      "distance_to_setup_pct": -15.09,
+      "distance_to_setup_pct": -9.33,
       "flag": "SETUP",
       "tier": "tier_b",
       "theme": "software"
@@ -530,10 +530,10 @@
     {
       "ticker": "QCOM",
       "data_missing": false,
-      "price": 173.47,
+      "price": 176.08,
       "price_source": "snapshot",
-      "price_date": "2026-10-19",
-      "pct_from_52w_high": -33.26,
+      "price_date": "2026-10-23",
+      "pct_from_52w_high": -32.26,
       "pct_from_cost": null,
       "questions": {
         "q1": false,
@@ -544,7 +544,7 @@
       },
       "test_score": 3,
       "setup_price": 207.94,
-      "distance_to_setup_pct": -16.58,
+      "distance_to_setup_pct": -15.32,
       "flag": "NIKE",
       "tier": "tier_b",
       "theme": "ai_infra"
@@ -552,10 +552,10 @@
     {
       "ticker": "ORCL",
       "data_missing": false,
-      "price": 129.4,
+      "price": 126.16,
       "price_source": "snapshot",
-      "price_date": "2026-10-19",
-      "pct_from_52w_high": -57.47,
+      "price_date": "2026-10-26",
+      "pct_from_52w_high": -56.04,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -565,8 +565,8 @@
         "q5": false
       },
       "test_score": 3,
-      "setup_price": 243.42,
-      "distance_to_setup_pct": -46.84,
+      "setup_price": 229.6,
+      "distance_to_setup_pct": -45.05,
       "flag": "NONE",
       "tier": "tier_b",
       "theme": "software"
@@ -574,10 +574,10 @@
     {
       "ticker": "NKE",
       "data_missing": false,
-      "price": 37.23,
+      "price": 37.33,
       "price_source": "snapshot",
-      "price_date": "2026-10-19",
-      "pct_from_52w_high": -47.15,
+      "price_date": "2026-10-23",
+      "pct_from_52w_high": -47.0,
       "pct_from_cost": null,
       "questions": {
         "q1": false,
@@ -588,7 +588,7 @@
       },
       "test_score": 3,
       "setup_price": 56.35,
-      "distance_to_setup_pct": -33.93,
+      "distance_to_setup_pct": -33.75,
       "flag": "NIKE",
       "tier": "tier_b",
       "theme": "consumer"
@@ -596,10 +596,10 @@
     {
       "ticker": "MCO",
       "data_missing": false,
-      "price": 481.1,
+      "price": 483.3,
       "price_source": "snapshot",
-      "price_date": "2026-10-19",
-      "pct_from_52w_high": -12.03,
+      "price_date": "2026-10-23",
+      "pct_from_52w_high": -11.63,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -610,18 +610,18 @@
       },
       "test_score": 5,
       "setup_price": 437.5,
-      "distance_to_setup_pct": 9.97,
-      "flag": "WATCH",
+      "distance_to_setup_pct": 10.47,
+      "flag": "NONE",
       "tier": "tier_b",
       "theme": "other"
     },
     {
       "ticker": "SPGI",
       "data_missing": false,
-      "price": 427.9,
+      "price": 450.28,
       "price_source": "snapshot",
-      "price_date": "2026-10-19",
-      "pct_from_52w_high": -22.52,
+      "price_date": "2026-10-23",
+      "pct_from_52w_high": -18.46,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -632,7 +632,7 @@
       },
       "test_score": 3,
       "setup_price": 441.8,
-      "distance_to_setup_pct": -3.15,
+      "distance_to_setup_pct": 1.92,
       "flag": "NONE",
       "tier": "tier_b",
       "theme": "other"
@@ -640,10 +640,10 @@
     {
       "ticker": "CME",
       "data_missing": false,
-      "price": 293.49,
+      "price": 305.71,
       "price_source": "snapshot",
-      "price_date": "2026-10-19",
-      "pct_from_52w_high": -10.84,
+      "price_date": "2026-10-23",
+      "pct_from_52w_high": -7.12,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -654,7 +654,7 @@
       },
       "test_score": 3,
       "setup_price": 263.33,
-      "distance_to_setup_pct": 11.45,
+      "distance_to_setup_pct": 16.09,
       "flag": "NONE",
       "tier": "tier_b",
       "theme": "other"
@@ -662,10 +662,10 @@
     {
       "ticker": "JNJ",
       "data_missing": false,
-      "price": 254.0,
+      "price": 263.86,
       "price_source": "snapshot",
-      "price_date": "2026-10-19",
-      "pct_from_52w_high": -9.63,
+      "price_date": "2026-10-23",
+      "pct_from_52w_high": -6.12,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -676,7 +676,7 @@
       },
       "test_score": 4,
       "setup_price": 224.86,
-      "distance_to_setup_pct": 12.96,
+      "distance_to_setup_pct": 17.34,
       "flag": "NIKE",
       "tier": "tier_b",
       "theme": "health"
@@ -684,10 +684,10 @@
     {
       "ticker": "BRK.B",
       "data_missing": false,
-      "price": 532.42,
+      "price": 542.11,
       "price_source": "snapshot",
-      "price_date": "2026-10-19",
-      "pct_from_52w_high": -0.99,
+      "price_date": "2026-10-23",
+      "pct_from_52w_high": -1.43,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -697,8 +697,8 @@
         "q5": null
       },
       "test_score": 2,
-      "setup_price": 430.19,
-      "distance_to_setup_pct": 23.76,
+      "setup_price": 439.97,
+      "distance_to_setup_pct": 23.22,
       "flag": "NONE",
       "tier": "tier_b",
       "theme": "other"
@@ -706,10 +706,10 @@
     {
       "ticker": "CAT",
       "data_missing": false,
-      "price": 725.46,
+      "price": 687.07,
       "price_source": "snapshot",
-      "price_date": "2026-10-19",
-      "pct_from_52w_high": -32.42,
+      "price_date": "2026-10-23",
+      "pct_from_52w_high": -35.99,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -720,7 +720,7 @@
       },
       "test_score": 3,
       "setup_price": 858.77,
-      "distance_to_setup_pct": -15.52,
+      "distance_to_setup_pct": -19.99,
       "flag": "NONE",
       "tier": "tier_b",
       "theme": "other"
@@ -728,10 +728,10 @@
     {
       "ticker": "NEE",
       "data_missing": false,
-      "price": 78.17,
+      "price": 82.1,
       "price_source": "snapshot",
-      "price_date": "2026-10-19",
-      "pct_from_52w_high": -20.84,
+      "price_date": "2026-10-23",
+      "pct_from_52w_high": -16.86,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -742,7 +742,7 @@
       },
       "test_score": 3,
       "setup_price": 79.0,
-      "distance_to_setup_pct": -1.05,
+      "distance_to_setup_pct": 3.92,
       "flag": "NONE",
       "tier": "tier_b",
       "theme": "utility"
@@ -750,10 +750,10 @@
     {
       "ticker": "WM",
       "data_missing": false,
-      "price": 226.44,
+      "price": 239.39,
       "price_source": "snapshot",
-      "price_date": "2026-10-19",
-      "pct_from_52w_high": -8.74,
+      "price_date": "2026-10-23",
+      "pct_from_52w_high": -3.52,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -764,7 +764,7 @@
       },
       "test_score": 5,
       "setup_price": 198.5,
-      "distance_to_setup_pct": 14.08,
+      "distance_to_setup_pct": 20.6,
       "flag": "NONE",
       "tier": "tier_b",
       "theme": "other"
@@ -772,10 +772,10 @@
     {
       "ticker": "TXN",
       "data_missing": false,
-      "price": 276.06,
+      "price": 284.92,
       "price_source": "snapshot",
-      "price_date": "2026-10-19",
-      "pct_from_52w_high": -17.35,
+      "price_date": "2026-10-23",
+      "pct_from_52w_high": -14.7,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -786,7 +786,7 @@
       },
       "test_score": 5,
       "setup_price": 267.22,
-      "distance_to_setup_pct": 3.31,
+      "distance_to_setup_pct": 6.62,
       "flag": "WATCH",
       "tier": "tier_b",
       "theme": "ai_infra"
@@ -794,10 +794,10 @@
     {
       "ticker": "QBTS",
       "data_missing": false,
-      "price": 11.61,
+      "price": 11.65,
       "price_source": "snapshot",
       "price_date": "2026-10-23",
-      "pct_from_52w_high": -70.74,
+      "pct_from_52w_high": -69.03,
       "pct_from_cost": null,
       "questions": {
         "q1": false,
@@ -807,8 +807,8 @@
         "q5": true
       },
       "test_score": 2,
-      "setup_price": 31.74,
-      "distance_to_setup_pct": -63.42,
+      "setup_price": 30.1,
+      "distance_to_setup_pct": -61.3,
       "flag": "NIKE",
       "tier": "spec",
       "theme": "quantum"
@@ -816,10 +816,10 @@
     {
       "ticker": "RGTI",
       "data_missing": false,
-      "price": 11.52,
+      "price": 11.51,
       "price_source": "snapshot",
       "price_date": "2026-10-23",
-      "pct_from_52w_high": -76.12,
+      "pct_from_52w_high": -74.15,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -829,8 +829,8 @@
         "q5": null
       },
       "test_score": 2,
-      "setup_price": 38.6,
-      "distance_to_setup_pct": -70.16,
+      "setup_price": 35.62,
+      "distance_to_setup_pct": -67.69,
       "flag": "NIKE",
       "tier": "spec",
       "theme": "quantum"
@@ -838,10 +838,10 @@
     {
       "ticker": "IONQ",
       "data_missing": false,
-      "price": 31.34,
+      "price": 31.15,
       "price_source": "snapshot",
       "price_date": "2026-10-23",
-      "pct_from_52w_high": -57.45,
+      "pct_from_52w_high": -57.71,
       "pct_from_cost": null,
       "questions": {
         "q1": true,
@@ -852,7 +852,7 @@
       },
       "test_score": 1,
       "setup_price": 58.92,
-      "distance_to_setup_pct": -46.81,
+      "distance_to_setup_pct": -47.13,
       "flag": "NIKE",
       "tier": "spec",
       "theme": "quantum"
