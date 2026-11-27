@@ -1,14 +1,63 @@
 {
-  "run_date": "2026-11-25",
-  "run_at": "2026-11-25T15:37:04Z",
+  "run_date": "2026-11-27",
+  "run_at": "2026-11-27T15:06:46Z",
   "mode": "normal",
   "dry_run": false,
-  "tickers_fetched": 23,
+  "tickers_fetched": 0,
   "requests_made": 49,
   "credits_used_estimate": 0.98,
-  "data_missing": [],
+  "data_missing": [
+    "MSFT",
+    "GOOGL",
+    "NFLX",
+    "META",
+    "AMZN",
+    "ASML",
+    "TSM",
+    "AVGO",
+    "V",
+    "MA",
+    "KO",
+    "PG",
+    "COST",
+    "NVO",
+    "LLY",
+    "UNH",
+    "VST",
+    "AEP",
+    "LMT",
+    "MP",
+    "QBTS",
+    "RGTI",
+    "IONQ"
+  ],
   "errors": {
-    "XLP": "index XLP: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=XLP&interval=day&interval_multiplier=1&start_date=2026-11-20&end_date=2026-11-25"
+    "MSFT": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=MSFT&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "GOOGL": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=GOOGL&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "NFLX": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=NFLX&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "META": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=META&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "AMZN": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=AMZN&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "ASML": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=ASML&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "TSM": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=TSM&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "AVGO": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=AVGO&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "V": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=V&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "MA": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=MA&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "KO": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=KO&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "PG": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=PG&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "COST": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=COST&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "NVO": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=NVO&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "LLY": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=LLY&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "UNH": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=UNH&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "VST": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=VST&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "AEP": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=AEP&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "LMT": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=LMT&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "MP": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=MP&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "QBTS": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=QBTS&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "RGTI": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=RGTI&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "IONQ": "price: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=IONQ&interval=day&interval_multiplier=1&start_date=2026-11-17&end_date=2026-11-27",
+    "SPY": "index SPY: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=SPY&interval=day&interval_multiplier=1&start_date=2026-11-24&end_date=2026-11-27",
+    "XLK": "index XLK: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=XLK&interval=day&interval_multiplier=1&start_date=2026-11-23&end_date=2026-11-27",
+    "XLP": "index XLP: 402 Client Error: Payment Required for url: https://api.financialdatasets.ai/prices?ticker=XLP&interval=day&interval_multiplier=1&start_date=2026-11-20&end_date=2026-11-27"
   },
   "macro": {
     "spy_price": 718.78,
@@ -25,7 +74,7 @@
   "tickers": [
     {
       "ticker": "MSFT",
-      "data_missing": false,
+      "data_missing": true,
       "price": 481.93,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -47,7 +96,7 @@
     },
     {
       "ticker": "GOOGL",
-      "data_missing": false,
+      "data_missing": true,
       "price": 267.41,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -69,7 +118,7 @@
     },
     {
       "ticker": "NFLX",
-      "data_missing": false,
+      "data_missing": true,
       "price": 57.61,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -91,7 +140,7 @@
     },
     {
       "ticker": "META",
-      "data_missing": false,
+      "data_missing": true,
       "price": 579.41,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -113,7 +162,7 @@
     },
     {
       "ticker": "AMZN",
-      "data_missing": false,
+      "data_missing": true,
       "price": 238.74,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -135,7 +184,7 @@
     },
     {
       "ticker": "ASML",
-      "data_missing": false,
+      "data_missing": true,
       "price": 1253.77,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -157,7 +206,7 @@
     },
     {
       "ticker": "TSM",
-      "data_missing": false,
+      "data_missing": true,
       "price": 327.49,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -179,7 +228,7 @@
     },
     {
       "ticker": "AVGO",
-      "data_missing": false,
+      "data_missing": true,
       "price": 284.88,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -201,7 +250,7 @@
     },
     {
       "ticker": "V",
-      "data_missing": false,
+      "data_missing": true,
       "price": 417.07,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -223,7 +272,7 @@
     },
     {
       "ticker": "MA",
-      "data_missing": false,
+      "data_missing": true,
       "price": 646.16,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -245,7 +294,7 @@
     },
     {
       "ticker": "KO",
-      "data_missing": false,
+      "data_missing": true,
       "price": 98.0,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -267,7 +316,7 @@
     },
     {
       "ticker": "PG",
-      "data_missing": false,
+      "data_missing": true,
       "price": 173.58,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -289,7 +338,7 @@
     },
     {
       "ticker": "COST",
-      "data_missing": false,
+      "data_missing": true,
       "price": 1090.08,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -311,7 +360,7 @@
     },
     {
       "ticker": "NVO",
-      "data_missing": false,
+      "data_missing": true,
       "price": 40.2,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -333,7 +382,7 @@
     },
     {
       "ticker": "LLY",
-      "data_missing": false,
+      "data_missing": true,
       "price": 1390.46,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -355,7 +404,7 @@
     },
     {
       "ticker": "UNH",
-      "data_missing": false,
+      "data_missing": true,
       "price": 341.12,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -377,7 +426,7 @@
     },
     {
       "ticker": "VST",
-      "data_missing": false,
+      "data_missing": true,
       "price": 117.59,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -399,7 +448,7 @@
     },
     {
       "ticker": "AEP",
-      "data_missing": false,
+      "data_missing": true,
       "price": 127.56,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -421,7 +470,7 @@
     },
     {
       "ticker": "LMT",
-      "data_missing": false,
+      "data_missing": true,
       "price": 593.73,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -443,7 +492,7 @@
     },
     {
       "ticker": "MP",
-      "data_missing": false,
+      "data_missing": true,
       "price": 34.05,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -795,7 +844,7 @@
     },
     {
       "ticker": "QBTS",
-      "data_missing": false,
+      "data_missing": true,
       "price": 6.24,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -817,7 +866,7 @@
     },
     {
       "ticker": "RGTI",
-      "data_missing": false,
+      "data_missing": true,
       "price": 7.11,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
@@ -839,7 +888,7 @@
     },
     {
       "ticker": "IONQ",
-      "data_missing": false,
+      "data_missing": true,
       "price": 20.98,
       "price_source": "snapshot",
       "price_date": "2026-11-25",
